@@ -42,9 +42,9 @@ public class AccountTest {
     }
 
     @Test
-    public void testWithdrawAmountGreaterThanBalance() {
-        Account account = new Account(50);
-        account.withdraw(80);
-        assertEquals("-30.0", account.toString());
+    public void shouldAllowWithdraw500IfBalanceIs400() {
+        Account account = new Account(400);
+        account.withdraw(500);
+        assertEquals("-100.0", account.toString());
     }
 }
