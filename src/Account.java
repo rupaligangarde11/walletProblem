@@ -17,12 +17,7 @@ public class Account {
         return "" + totalAmount;
     }
 
-    public boolean isEmpty() {
-        return totalAmount == 0;
-    }
-
-
-    public void withdraw(double amount){
+    public void withdraw(double amount) {
         totalAmount -= amount;
     }
 }

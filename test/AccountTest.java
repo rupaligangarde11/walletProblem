@@ -1,7 +1,6 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class AccountTest {
 
@@ -22,20 +21,14 @@ public class AccountTest {
     }
 
     @Test
-    public void checkIfWalletIsEmpty() {
-        Account account = new Account(0);
-        assertTrue(account.isEmpty());
-    }
-
-    @Test
     public void checkIfMoneyIsWithdrawn() throws Exception {
         Account account = new Account(30);
         account.withdraw(20);
         assertEquals("10.0", account.toString());
     }
-    
+
     @Test
-    public void shouldNotBeAddedIfAmountGivenIsNegative(){
+    public void shouldNotBeAddedIfAmountGivenIsNegative() {
         Account account = new Account(10);
         account.addMoney(-90);
         assertEquals("10.0", account.toString());
