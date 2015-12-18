@@ -1,8 +1,8 @@
-public class WalletClass {
+public class Account {
 
     private double totalAmount;
 
-    public WalletClass(double totalAmount) {
+    public Account(double totalAmount) {
         this.totalAmount = totalAmount;
     }
 
@@ -22,9 +22,7 @@ public class WalletClass {
     }
 
 
-    public void withdraw(double amount) {
-        if (isEmpty() || totalAmount < amount)
-            return;
+    public void withdraw(double amount){
         totalAmount -= amount;
     }
 }
